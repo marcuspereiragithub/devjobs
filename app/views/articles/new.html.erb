@@ -1,0 +1,36 @@
+<h1>Register</h1>
+<%= form_with scope: :user, url: articles_path, local: true do |form| %>
+  <p>
+    <%= form.label :Company_name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :Company_website %><br>
+    <%= form.text_field :website %>
+  </p>
+
+  <p>
+    <%= form.label :Title_of_the_vacancy %><br>
+    <%= form.text_field :title %>
+  </p>
+
+  <p>
+    <%= form.label :Vacancy_description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.label :Location_of_vacancy %><br>
+    <%= form.text_field :location %>
+  </p>
+
+  <p>
+    <%= form.label :Contact_email %><br>
+    <%= form.text_field :email %>
+  </p>
+ 
+  <p>
+    <%= form.submit 'Vacancy Register' %>
+  </p>
+<% end %>
+<div><%= link_to 'Go to List of registered vacancies', register_index_path %></div>
