@@ -1,0 +1,29 @@
+@import 'materialize';
+@import 'material_icons';
+
+@import 'colors';
+
+.main-nav {
+  background-color: $color-header;
+}
+
+.title-vancancy {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.company-name,
+.location,
+.company-website,
+.email {
+  color: $color-gray;
+  font-size: 0.875em;
+  margin: 5px 0;
+}
+
+.card {
+  .card-content {
+    padding: 13px 16px;
+  }
+}

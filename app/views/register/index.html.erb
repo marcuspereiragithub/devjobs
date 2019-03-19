@@ -1,18 +1,19 @@
-<h1>List of registered vacancies</h1>
-<table>
-  <tr>
-  </tr>
- 
-  <% @users.each do |user| %>
-    <ul>
-      <li><strong><span>Company name: </span></strong><%= user.name %></li>
-      <li><strong><span>Company website: </span></strong><%= user.website %></li>
-      <li><strong><span>Title of the vacancy: </span></strong><%= user.title %></li>
-      <li><strong><span>Vancancy description: </span></strong><%= user.description %></li>
-      <li><strong><span>Location of Vancancy: </span></strong><%= user.location %></li>
-      <li><strong><span>Contact e-mail: </span></strong><%= user.email %></li>
-    </ul>
-    <hr>
-  <% end %>
-  <td><%= link_to 'Go to Register', new_article_path %></td>
-</table>
+
+<%= render './header' %>
+<section class="container row">
+  <div class="col s4">
+    <% @users.each do |user| %>
+      <div class="card">
+        <div class="card-content">
+          <h2 class="title-vancancy"><%= user.title %></h2>
+          <p class="location"><%= user.location %></p>
+          <p class="company-website"><%= user.website %></p>
+          <p class="email"><%= user.email %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="col s8">
+    
+  </div>
+</section>
