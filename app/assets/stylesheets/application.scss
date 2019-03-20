@@ -10,20 +10,15 @@
 .title-vancancy {
   font-size: 1em;
   font-weight: 500;
-  margin: 10px 0;
+  // margin: 10px 0;
 }
 
-.company-name,
-.location,
-.company-website,
-.email {
+.vacancy-items p {
   color: $color-gray;
   font-size: 0.875em;
-  margin: 5px 0;
+  // margin: 5px 0;
 }
 
-.card {
-  .card-content {
-    padding: 13px 16px;
-  }
+.vacancy-items:hover {
+  background-color: rgb(241, 241, 241);
 }
