@@ -3,22 +3,35 @@
 
 @import 'colors';
 
+.access-time {
+  display: flex;
+
+  i {
+    margin-right: 5px;
+  }
+}
+
 .main-nav {
   background-color: $color-header;
+}
+
+.sidebar-content {
+  max-height: 600px;
+  overflow-y: scroll;
 }
 
 .title-vancancy {
   font-size: 1em;
   font-weight: 500;
-  // margin: 10px 0;
 }
 
-.vacancy-items p {
-  color: $color-gray;
-  font-size: 0.875em;
-  // margin: 5px 0;
-}
+.vacancy-items {
+  &:hover {
+    background-color: $color-hover;
+  }
 
-.vacancy-items:hover {
-  background-color: rgb(241, 241, 241);
+  p {
+    color: $color-gray;
+    font-size: .875em;
+  }
 }
