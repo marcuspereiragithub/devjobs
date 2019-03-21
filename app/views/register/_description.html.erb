@@ -1,8 +1,14 @@
 <div class="section">
   <h4><%= @selected_user.title %></h4>
-  <p><%= @selected_user.name %></p>
-  <p><%= @selected_user.location %></p>
+  <div class="brand-company">
+    <span>C</span>
+    <div>
+      <p><%= @selected_user.name %></p>
+      <p><%= @selected_user.location %></p>
+    </div>
+  </div>
   <div class="divider"></div>
+  <p class="access-time"><i class="material-icons">access_time</i><%= time_ago_in_words(@selected_user.created_at) %></p>
   <p><%= @selected_user.description %></p>
   <div class="divider"></div>
   <h5><%= @selected_user.name %></h5>
