@@ -1,0 +1,19 @@
+<div class="section">
+  <h4><%= selected_job.title %></h4>
+  <div class="brand-company">
+    <span class="brand-c"><%= selected_job.first_letter %></span>
+    <div>
+      <p><%= selected_job.name %></p>
+      <p><%= selected_job.location %></p>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <p class="access-time">
+    <i class="material-icons">access_time</i><%= time_ago_in_words(selected_job.created_at) %>
+  </p>
+  <p><%= selected_job.description %></p>
+  <div class="divider"></div>
+  <h5><%= selected_job.name %></h5>
+  <div class="divider"></div>
+<div>
+

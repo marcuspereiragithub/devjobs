@@ -1,0 +1,17 @@
+<ul class="collection">
+  <% jobs.each do |job| %>
+    <li class="collection-item avatar vacancy-items">
+      <%= link_to(jobs_path(id: job.id)) do %>
+        <%= image_tag 'vacancy.jpg', class: 'circle' %>
+        <span class="title title-vancancy"><%= job.title %></span>
+        <p><%= job.name %></p>
+        <p><%= job.location %></p>
+        <p class="access-time">
+          <i class="material-icons">access_time</i><%= time_ago_in_words(job.created_at) %>
+        </p>
+        <span class="secondary-content"><i class="material-icons">grade</i></span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+  
