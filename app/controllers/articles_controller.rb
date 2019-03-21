@@ -20,3 +20,4 @@ class ArticlesController < ApplicationController
                                   :description, :location, :email)
   end
 end
+

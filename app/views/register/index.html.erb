@@ -1,20 +1,11 @@
 
-<%= render './header' %>
+<%= render 'header' %>
 <section class="container row">
   <div class="col s4 sidebar-content">
-    <%= render './sidebar' %>
+    <%= render 'sidebar' %>
   </div>
   <div class="col s8">
-    <div class="section">
-      <h4><%= @selected_user.title %></h4>
-      <p><%= @selected_user.name %></p>
-      <p><%= @selected_user.location %></p>
-      <div class="divider"></div>
-      <p><%= @selected_user.description %></p>
-      <div class="divider"></div>
-      <h5><%= @selected_user.name %></h5>
-      <div class="divider"></div>
-      <p></p>
-    <div>
+    <%= render 'description' %>
   </div>
 </section>
+
