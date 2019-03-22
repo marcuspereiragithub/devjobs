@@ -8,13 +8,17 @@ class JobsController < ApplicationController
     end
   end
 
-  def new; end
+  def new
+    @jobs = Job.new
+  end
   
   def create
     @jobs = Job.new(job_params)
-    @jobs.save
-
-    redirect_to jobs_path
+    if @jobs.save
+      redirect_to jobs_path
+    else
+      render 'new'
+    end
   end
 
   private

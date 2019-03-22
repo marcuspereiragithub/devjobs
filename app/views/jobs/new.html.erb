@@ -1,6 +1,11 @@
 <div class="container row">
   <h1>Registrar Vagas</h1>
   <%= form_with scope: :job, url: jobs_path, class: 'col s12', local: true do |form| %>
+    <% if @jobs.errors.any? %>
+      <% @jobs.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    <% end %>
     <div class="row">
       <div class="input-field col s6">
         <%= form.label :name, 'Nome da empresa' %>
