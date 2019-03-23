@@ -12,7 +12,7 @@ gem 'material_icons'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'#, '~> 1.3.13'
+# gem 'sqlite3', '~> 1.3.13'
 # Postgres
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
