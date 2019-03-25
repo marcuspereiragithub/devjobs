@@ -3,7 +3,11 @@
     <%= render partial: 'sidebar', locals: { jobs: @jobs } %>
   </div>
   <div class="col s8">
-    <%= render partial: 'description', locals: { selected_job: @selected_job } %>
+    <% if @selected_job == nil %>
+      <div class="section"><p class="center-align">Insira uma vaga clicando em "Registrar Vagas!"</p></div>
+    <% else %>
+      <%= render partial: 'description', locals: { selected_job: @selected_job } %>
+    <% end %>
   </div>
 </section>
 
