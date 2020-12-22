@@ -1,4 +1,5 @@
 class Job < ApplicationRecord
+  belongs_to :user
   validates_presence_of :name, message: "'Nome da empresa' não pode ficar em branco"
   validates_presence_of :title, message: "'Título da vaga' não pode ficar em branco"
   validates_presence_of :location, message: "'Local' não pode ficar em branco"
