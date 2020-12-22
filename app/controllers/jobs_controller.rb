@@ -1,4 +1,6 @@
 class JobsController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @jobs = Job.all
     if params[:id]
@@ -9,13 +11,13 @@ class JobsController < ApplicationController
   end
 
   def new
-    @jobs = Job.new
+    @jobs = current_user.jobs.build
   end
   
   def create
-    @jobs = Job.new(job_params)
+    @jobs = Job.current_user.build(job_params)
     if @jobs.save
-      redirect_to jobs_path
+      redirect_to jobs_path 
     else
       render 'new'
     end

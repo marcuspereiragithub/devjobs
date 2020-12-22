@@ -3,6 +3,7 @@
     <%= link_to 'DevJobs', jobs_path, class:'brand-logo' %>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><%= link_to 'Registrar Vagas', new_job_path %></li>
+      <li><%= link_to 'Sair', destroy_user_session_path, method: :delete %></li>
     </ul>
   </div>
 </nav>

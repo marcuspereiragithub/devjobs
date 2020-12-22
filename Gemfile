@@ -5,9 +5,10 @@ ruby '2.5.0'
 # Inclua nas versões quando rails >= 5.1 
 gem 'jquery-rails'
  
-# Sempre inclua
+# Specific gems
 gem 'materialize-sass'
 gem 'material_icons'
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
