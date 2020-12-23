@@ -17,6 +17,7 @@
   <div class="divider"></div>
   <div class="description-btn">
     <%if user_signed_in? && current_user == selected_job.user %>
+      <%= button_to "Edit", edit_job_path(selected_job.id), method: :get, class: 'btn blue accent-4' %>
       <%= button_to "Delete vacancy", job_path(selected_job.id), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn red accent-4' %>
     <%end%>
   </div>

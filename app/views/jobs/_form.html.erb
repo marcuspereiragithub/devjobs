@@ -1,0 +1,48 @@
+<%= form_for @job do |form| %>
+  <% if @job.errors.any? %>
+    <% @job.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  <% end %>
+  <div class="row">
+    <div class="input-field col s6">
+      <i class="material-icons prefix">business</i>
+      <%= form.label :name, 'Nome da empresa' %>
+      <%= form.text_field :name %>
+    </div>
+    <div class="input-field col s6">
+      <i class="material-icons prefix">insert_link</i>
+      <%= form.label :website, 'Site da empresa' %>
+      <%= form.text_field :website %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">work</i>
+      <%= form.label :title, 'Título da vaga' %>
+      <%= form.text_field :title %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <i class="material-icons prefix">description</i>
+      <%= form.label :description, 'Descrição da vaga' %>
+      <%= form.text_area :description %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <i class="material-icons prefix">place</i>
+      <%= form.label :location, 'Local' %>
+      <%= form.text_field :location %>
+    </div>
+    <div class="input-field col s6">
+      <i class="material-icons prefix">email</i>
+      <%= form.label :email, 'Email da empresa' %>
+      <%= form.text_field :email %>
+    </div>
+  </div>
+  <%= button_tag(class: 'btn waves-effect waves-light') do %>
+    Registrar <i class="material-icons right">send</i>
+  <% end %>
+<% end %>
