@@ -29,9 +29,17 @@
   background-color: $color-header;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sidebar-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
 .sidebar-content {
-  max-height: 600px;
+  max-height: 84vh;
   overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .title-vancancy {
