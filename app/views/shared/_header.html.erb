@@ -1,7 +1,7 @@
 <nav class="main-nav">
-  <div class="nav-wrapper">
+  <div class="container nav-wrapper">
     <%= link_to 'DevJobs', jobs_path, class:'brand-logo' %>
-    <ul id="nav-mobile" class="right">
+    <ul class="right">
       <% if user_signed_in? %>
         <li><%= link_to 'Registrar Vagas', new_job_path %></li>
         <li><%= link_to 'Conta', edit_user_registration_path %></li>
