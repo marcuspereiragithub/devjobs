@@ -1,4 +1,4 @@
-<div class="section">
+<div class="section description">
   <h4><%= selected_job.title %></h4>
   <div class="brand-company">
     <span class="brand-c"><%= selected_job.first_letter %></span>
@@ -15,5 +15,10 @@
   <div class="divider"></div>
   <h5><%= selected_job.name %></h5>
   <div class="divider"></div>
+  <div class="description-btn">
+    <%if user_signed_in? && current_user == selected_job.user %>
+      <%= button_to "Delete vacancy", job_path(selected_job.id), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn red accent-4' %>
+    <%end%>
+  </div>
 <div>
 

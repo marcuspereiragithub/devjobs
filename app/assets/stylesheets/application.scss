@@ -25,11 +25,6 @@
   }
 }
 
-nav {
-  .brand-logo {
-    padding: 0 15px;
-  }
-}
 .main-nav {
   background-color: $color-header;
 }
@@ -57,4 +52,28 @@ nav {
 
 #job_description {
   padding: 10px;
+}
+
+@keyframes right_to_left {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.description {
+  animation: right_to_left .5s;
+
+  .description-btn {
+    display: flex;
+    padding: 20px 0;
+
+    input {
+      margin-right: 10px;
+    }
+  }
 }

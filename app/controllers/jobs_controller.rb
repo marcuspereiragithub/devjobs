@@ -23,6 +23,18 @@ class JobsController < ApplicationController
     end
   end
 
+  def destroy
+    @job = Job.find(params[:id])
+    if @job.destroy
+      flash[:success] = 'Object was successfully deleted.'
+      redirect_to jobs_url
+    else
+      flash[:error] = 'Something went wrong'
+      redirect_to jobs_url
+    end
+  end
+  
+
   private
 
   def job_params
