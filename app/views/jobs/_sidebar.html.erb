@@ -7,7 +7,7 @@
         <p><%= job.name %></p>
         <p><%= job.location %></p>
         <p class="access-time">
-          <i class="material-icons">access_time</i><%= time_ago_in_words(job.created_at) %>
+          <i class="material-icons">access_time</i><%= "#{time_ago_in_words(job.created_at)} by #{job.user.name}"%>
         </p>
         <span class="secondary-content"><i class="material-icons">grade</i></span>
       <% end %>
