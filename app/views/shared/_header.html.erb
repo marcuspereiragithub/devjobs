@@ -1,7 +1,8 @@
 <nav class="main-nav">
   <div class="container nav-wrapper">
     <%= link_to 'DevJobs', jobs_path, class:'brand-logo' %>
-    <ul class="right">
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
       <% if user_signed_in? %>
         <li><%= link_to 'Registrar Vagas', new_job_path %></li>
         <li><%= link_to 'Conta', edit_user_registration_path %></li>
@@ -14,3 +15,13 @@
   </div>
 </nav>
 
+<ul class="sidenav" id="mobile-demo">
+  <% if user_signed_in? %>
+    <li><%= link_to 'Registrar Vagas', new_job_path %></li>
+    <li><%= link_to 'Conta', edit_user_registration_path %></li>
+    <li><%= link_to 'Sair', destroy_user_session_path, method: :delete %></li>
+  <% else %>
+    <li><%= link_to 'Faça seu login', new_user_session_path %></li>
+    <li><%= link_to 'Cadastrar', new_user_registration_path %></li>
+  <% end %>
+</ul>

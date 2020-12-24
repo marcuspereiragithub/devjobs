@@ -6,3 +6,8 @@
 //= require turbolinks
 //= require materialize-sprockets
 //= require_tree .
+
+// start hamburger mobile effect
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
