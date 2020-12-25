@@ -4,16 +4,19 @@
     <title>DevJobs</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap" rel="stylesheet">
   </head>
-
   <body>
     <%= render '/shared/header' %>
     <div class="container">
-      <p class="notice row"><%= notice %></p>
-      <p class="alert row"><%= alert %></p>
+      <% if notice %>
+        <p class="notice row"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert row"><%= alert %></p>
+      <% end %>
       <%= yield %>
     </div>
   </body>

@@ -30,7 +30,7 @@ class JobsController < ApplicationController
   def update
     @job = Job.find(params[:id])
     if @job.update_attributes(job_params)
-      flash[:success] = "Object was successfully updated"
+      flash[:success] = "Job was successfully updated"
       redirect_to jobs_url
     else
       flash[:error] = "Something went wrong"
@@ -41,7 +41,7 @@ class JobsController < ApplicationController
   def destroy
     @job = Job.find(params[:id])
     if @job.destroy
-      flash[:success] = 'Object was successfully deleted.'
+      flash[:success] = 'Job was successfully deleted.'
       redirect_to jobs_url
     else
       flash[:error] = 'Something went wrong'

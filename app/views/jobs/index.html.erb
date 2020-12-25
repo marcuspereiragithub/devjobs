@@ -4,10 +4,11 @@
   </div>
   <div class="col s8">
     <% if @selected_job == nil %>
-      <div class="section"><p class="center-align">Insira uma vaga clicando em "Registrar Vagas!"</p></div>
+      <div class="section">
+        <p class="center-align">Insira uma vaga clicando em "Registrar Vagas!"</p>
+      </div>
     <% else %>
       <%= render partial: 'description', locals: { selected_job: @selected_job } %>
     <% end %>
   </div>
 </section>
-

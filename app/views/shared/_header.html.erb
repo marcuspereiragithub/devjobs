@@ -4,24 +4,23 @@
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <% if user_signed_in? %>
-        <li><%= link_to 'Registrar Vagas', new_job_path %></li>
-        <li><%= link_to 'Conta', edit_user_registration_path %></li>
-        <li><%= link_to 'Sair', destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to 'Register Vacancy', new_job_path %></li>
+        <li><%= link_to 'Account', edit_user_registration_path %></li>
+        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
       <% else %>
-        <li><%= link_to 'Faça seu login', new_user_session_path %></li>
-        <li><%= link_to 'Cadastrar', new_user_registration_path %></li>
+        <li><%= link_to 'Log in', new_user_session_path %></li>
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
       <% end %>
     </ul>
   </div>
 </nav>
-
 <ul class="sidenav" id="mobile-demo">
   <% if user_signed_in? %>
-    <li><%= link_to 'Registrar Vagas', new_job_path %></li>
-    <li><%= link_to 'Conta', edit_user_registration_path %></li>
-    <li><%= link_to 'Sair', destroy_user_session_path, method: :delete %></li>
+    <li><%= link_to 'Register Vacancy', new_job_path %></li>
+    <li><%= link_to 'Account', edit_user_registration_path %></li>
+    <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
   <% else %>
-    <li><%= link_to 'Faça seu login', new_user_session_path %></li>
-    <li><%= link_to 'Cadastrar', new_user_registration_path %></li>
+    <li><%= link_to 'Log in', new_user_session_path %></li>
+    <li><%= link_to 'Sign up', new_user_registration_path %></li>
   <% end %>
 </ul>
