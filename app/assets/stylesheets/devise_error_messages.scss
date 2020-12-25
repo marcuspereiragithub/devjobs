@@ -1,0 +1,36 @@
+#error_explanation {
+  background-color: #f8d7da;
+  border: 1px solid #d3868b;
+  border-radius: 5px;
+  color: #790101;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+.notice {
+  background-color: #d4edda;
+  border-radius: 5px;
+  border: 1px solid #aff1bf;
+  color: #01791e;
+  width: 100%;
+  max-width: 800px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.alert {
+  background-color: #f8d7da;
+  border-radius: 5px;
+  border: 1px solid #d3868b;
+  color: #790101;
+  width: 100%;
+  max-width: 800px;
+  padding: 10px 0;
+  text-align: center;
+}
