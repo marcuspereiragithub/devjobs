@@ -1,7 +1,9 @@
-@import 'materialize';
-@import 'material_icons';
+@import "materialize";
+@import "material_icons";
 
-@import 'colors';
+@import "global";
+@import "colors";
+@import "devise_error_messages";
 
 .access-time {
   display: flex;
@@ -36,10 +38,10 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .sidebar-content {
-  max-height: 84vh;
+  max-height: calc(100vh - 64px);
   overflow-y: scroll;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .title-vancancy {
@@ -54,7 +56,7 @@
 
   p {
     color: $color-gray;
-    font-size: .875em;
+    font-size: 0.875em;
   }
 }
 
@@ -74,7 +76,7 @@
 }
 
 .description {
-  animation: right_to_left .5s;
+  animation: right_to_left 0.5s;
 
   .description-btn {
     display: flex;
