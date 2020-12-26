@@ -1,12 +1,14 @@
-<div class="row">
+<div class="row container-forms">
   <h2>Log in</h2>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field input-field col s12">
-      <%= f.label :email %><br />
+      <i class="material-icons prefix">email</i>
+      <%= f.label :email %>
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
     <div class="field input-field col s12">
-      <%= f.label :password %><br />
+      <i class="material-icons prefix">lock</i>
+      <%= f.label :password %>
       <%= f.password_field :password, autocomplete: "current-password" %>
     </div>
     <div class="col s12">
