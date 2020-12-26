@@ -4,12 +4,12 @@
       <p class="alert row"><%= msg %></p>
     <% end %>
   <% end %>
-  <div class="input-field col s6">
+  <div class="input-field col s12">
     <i class="material-icons prefix">business</i>
     <%= form.label :name, 'Company name' %>
     <%= form.text_field :name %>
   </div>
-  <div class="input-field col s6">
+  <div class="input-field col s12">
     <i class="material-icons prefix">insert_link</i>
     <%= form.label :website, 'Company website' %>
     <%= form.text_field :website %>
@@ -24,17 +24,19 @@
     <%= form.label :description, 'Vacancy dscription' %>
     <%= form.text_area(:description, class: "materialize-textarea") %>
   </div>
-  <div class="input-field col s6">
+  <div class="input-field col s12">
     <i class="material-icons prefix">place</i>
     <%= form.label :location, 'Location' %>
     <%= form.text_field :location %>
   </div>
-  <div class="input-field col s6">
+  <div class="input-field col s12">
     <i class="material-icons prefix">email</i>
     <%= form.label :email, 'Company email' %>
     <%= form.text_field :email %>
   </div>
-  <%= button_tag(class: 'btn waves-effect waves-light') do %>
-    Register <i class="material-icons right">send</i>
-  <% end %>
+  <div class="col s12">
+    <%= button_tag(class: 'btn waves-effect waves-light') do %>
+      Register <i class="material-icons right">send</i>
+    <% end %>
+  </div>
 <% end %>
