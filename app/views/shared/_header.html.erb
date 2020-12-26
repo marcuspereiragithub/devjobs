@@ -1,17 +1,21 @@
 <nav class="main-nav">
   <div class="container nav-wrapper">
-    <%= link_to 'DevJobs', jobs_path, class:'brand-logo' %>
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    <ul class="right hide-on-med-and-down">
-      <% if user_signed_in? %>
-        <li><%= link_to 'Register Vacancy', new_job_path %></li>
-        <li><%= link_to 'Account', edit_user_registration_path %></li>
-        <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li><%= link_to 'Log in', new_user_session_path %></li>
-        <li><%= link_to 'Sign up', new_user_registration_path %></li>
-      <% end %>
-    </ul>
+    <div class="row">
+      <div class="col s12">
+        <%= link_to 'DevJobs', jobs_path, class:'brand-logo' %>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <% if user_signed_in? %>
+            <li><%= link_to 'Register Vacancy', new_job_path %></li>
+            <li><%= link_to 'Account', edit_user_registration_path %></li>
+            <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li><%= link_to 'Log in', new_user_session_path %></li>
+            <li><%= link_to 'Sign up', new_user_registration_path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   </div>
 </nav>
 <ul class="sidenav" id="mobile-demo">
