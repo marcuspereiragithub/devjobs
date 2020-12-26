@@ -17,7 +17,7 @@
     <% end %>
     <div class="field input-field col s12">
       <i class="material-icons prefix">lock</i>
-      <%= f.label :password %>
+      <%= f.label :password %><br />
       <%= f.password_field :password, autocomplete: "new-password" %>
       <% if @minimum_password_length %>
         <em><%= @minimum_password_length %> characters minimum</em>
@@ -32,7 +32,7 @@
     </div>
     <div class="field input-field col s12">
       <i class="material-icons prefix">lock</i>
-      <%= f.label :current_password %>
+      <%= f.label :current_password %><br />
       <%= f.password_field :current_password, autocomplete: "current-password" %><br />
       <em>(we need your current password to confirm your changes)</em>
     </div>
