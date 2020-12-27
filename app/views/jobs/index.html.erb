@@ -2,7 +2,7 @@
   <div class="col s4 sidebar-content">
     <%= render partial: 'sidebar', locals: { jobs: @jobs } %>
   </div>
-  <div class="col s8">
+  <div class="col s8 description">
     <% if @selected_job == nil %>
       <div class="section">
         <p class="center-align">Insira uma vaga clicando em "Registrar Vagas!"</p>

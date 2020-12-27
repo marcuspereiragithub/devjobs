@@ -5,28 +5,6 @@
 @import "colors";
 @import "devise_error_messages";
 
-.access-time {
-  display: flex;
-
-  i {
-    margin-right: 5px;
-  }
-}
-
-.brand-company {
-  align-items: center;
-  display: flex;
-
-  .brand-c {
-    background: rgb(184, 183, 183);
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1.5em;
-    margin-right: 10px;
-    padding: 10px 20px;
-  }
-}
-
 .main-nav {
   background-color: $color-header;
   margin-bottom: 20px;
@@ -49,21 +27,47 @@
     background: #f1f1f1;
     border-radius: 5px;
   }
-}
 
-.title-vancancy {
-  font-size: 1em;
-  font-weight: 500;
-}
+  .collection {
+    border-bottom: 1px solid #f1f1ff;
 
-.vacancy-items {
-  &:hover {
-    background-color: $color-hover;
+    .vacancy-items {
+      &:hover {
+        background-color: $color-hover;
+      }
+      
+      .title-vancancy {
+        font-size: 1em;
+        font-weight: 500;
+      }
+    
+      p {
+        color: $color-gray;
+        font-size: 0.875em;
+      }
+    }
   }
+}
 
-  p {
-    color: $color-gray;
-    font-size: 0.875em;
+.brand-company {
+  align-items: center;
+  display: flex;
+
+  .brand-c {
+    background: rgb(184, 183, 183);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.5em;
+    margin-right: 10px;
+    padding: 10px 20px;
+  }
+}
+
+.access-time {
+  display: flex;
+
+  i {
+    margin-right: 5px;
   }
 }
 
@@ -94,7 +98,6 @@
     }
   }
 }
-
 
 .edit-job, .new-job {
   max-width: 800px;
