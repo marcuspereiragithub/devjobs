@@ -29,8 +29,6 @@
   }
 
   .collection {
-    border-bottom: 1px solid #f1f1ff;
-
     .vacancy-items {
       &:hover {
         background-color: $color-hover;
@@ -89,6 +87,10 @@
 .description {
   animation: right_to_left 0.5s;
 
+  .close {
+    display: none;
+  }
+
   .description-btn {
     display: flex;
     padding: 20px 0;
@@ -127,6 +129,39 @@ footer {
       img {
         width: 32px;
       }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sidebar-content {
+    width: 100% !important;
+
+    /* Hide scrollbar for Chrome, Safari and Opera */	
+    &::-webkit-scrollbar {	
+      display: none;	
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */	
+    -ms-overflow-style: none; /* IE and Edge */	
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .description {
+    position: absolute !important;
+    background-color: #ffffff;
+    width: 90% !important;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .close {
+      display: block;
+      position: absolute;
+      right: 20px;
+      font-size: 30px;
     }
   }
 }
